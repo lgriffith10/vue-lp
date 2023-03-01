@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import {createRouter, createWebHashHistory} from "vue-router";
 import './style.css'
 import App from './App.vue'
-import { routes } from './router';
+import { routes } from '@/router';
 
 const router = createRouter({
     history: createWebHashHistory(),
