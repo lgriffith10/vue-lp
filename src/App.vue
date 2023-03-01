@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import { VueQueryDevTools } from "vue-query/devtools";
+
+import { useGetCountries } from "@/entities/country/hooks";
+import { onUpdated } from "vue";
 
 const router = useRouter();
+
+const { data } = useGetCountries();
 </script>
 
 <template>
-  <router-link to="/">Homepage</router-link>
-  <router-link to="/details">Details</router-link>
   <router-view />
+  <VueQueryDevTools />
 </template>
