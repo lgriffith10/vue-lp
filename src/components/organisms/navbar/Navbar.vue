@@ -1,11 +1,12 @@
 <template>
   <ElMenu
     default-active="1"
+    :vue-router="true"
   >
     <ElMenuItem
-      v-for="(link) in links"
+      v-for="(link, index) in links"
       :key="link.name"
-      :index="link.path"
+      :index="index.toString()"
     >
       <router-link :to= "link.path">
         <ElIcon v-if="link.icon">

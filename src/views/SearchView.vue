@@ -1,7 +1,10 @@
 <template>
-  <div>
-    Search
-  </div>
+  <EmptyViewLayout title="Search" description="Search among these countries">
+
+  </EmptyViewLayout>
 </template>
 
-<script setup></script>
+<script setup>
+import EmptyViewLayout from "@/layouts/EmptyViewLayout.vue";
+
+</script>

@@ -1,15 +1,16 @@
 <template>
-  <div class="homepage">
-    Homepage
-  </div>
+  <EmptyViewLayout
+    title="Home"
+    description="This is the home page"
+    :top-header="false"
+  >
+    test
+  </EmptyViewLayout>
 </template>
 
 <script setup>
-import Navbar from '@/components/organisms/navbar/Navbar.vue';
+import EmptyViewLayout from "@/layouts/EmptyViewLayout.vue";
 </script>
 
 <style lang="scss">
-.homepage {
-  @apply  bg-red-500;
-}
 </style>
