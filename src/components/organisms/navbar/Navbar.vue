@@ -1,24 +1,53 @@
 <template>
-  <breadcrumb :items="links" />
+  <ElMenu
+    default-active="1"
+  >
+    <ElMenuItem
+      v-for="(link) in links"
+      :key="link.name"
+      :index="link.path"
+    >
+      <router-link :to= "link.path">
+        <ElIcon v-if="link.icon">
+          <component :is="link.icon"></component>
+        </ElIcon>
+        {{ link.name }}
+      </router-link>
+    </ElMenuItem>
+  </ElMenu>
 </template>
 
 <script setup lang="ts">
-import {onMounted, ref} from 'vue';
+import {
+  shallowRef,
+  Component as ComponentType,
+  Ref
+} from 'vue';
 
-import Breadcrumb from '@/components/molecules/breadcrumb';
+import {
+  ElMenu,
+  ElMenuItem,
+  ElIcon
+} from 'element-plus';
 
-onMounted(() => {
-  console.log('navbar')
-})
+import { Search, HomeFilled } from "@element-plus/icons-vue";
 
-const links = ref([
+type Link = {
+  name: string;
+  path: string;
+  icon?: ComponentType;
+};
+
+const links: Ref<Link[]> = shallowRef([
   {
-    name: 'Accueil',
     path: '/',
+    name: 'Home',
+    icon: HomeFilled,
   },
   {
-    name: 'Details',
-    path: '/details'
+    path: '/search',
+    name: 'Search',
+    icon: Search,
   }
 ])
 </script>

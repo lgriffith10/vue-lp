@@ -1,11 +1,12 @@
 <template>
   <el-breadcrumb :separator-icon="ArrowRight">
     <el-breadcrumb-item
-      v-for="item in items"
+      v-for="item in props.items"
       :key="item.name"
-      :to="{ path: item.link }"
     >
-      {{ item.name }}
+      <router-link :to="item.path">
+        {{ item.name }}
+      </router-link>
     </el-breadcrumb-item>
   </el-breadcrumb>
 </template>

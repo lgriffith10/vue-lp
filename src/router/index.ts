@@ -1,14 +1,14 @@
-import { Home, Details } from '../views';
+import { HomeView, SearchView } from '../views';
 
 export const routes = [
     {
         path: '/',
         name: 'front_home_index',
-        component: Home,
+        component: HomeView,
     },
     {
-        path: '/details',
-        name: 'front_details_index',
-        component: Details,
+        path: '/search',
+        name: 'front_search_index',
+        component: SearchView,
     }
 ]

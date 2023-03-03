@@ -1,7 +1,7 @@
-import Home from './Home.vue';
-import Details from './Details.vue';
+import HomeView from './HomeView.vue';
+import SearchView from './SearchView.vue';
 
 export {
-    Home,
-    Details,
+    HomeView,
+    SearchView,
 };

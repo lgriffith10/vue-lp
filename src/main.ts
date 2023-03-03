@@ -6,7 +6,7 @@ import App from '@/App.vue'
 import { VueQueryPlugin } from "vue-query";
 
 /* Router */
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import { routes } from '@/router';
 
 /* Components */
@@ -17,7 +17,7 @@ import 'element-plus/dist/index.css'
 import '@/styles/main.scss'
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes,
 })
 
